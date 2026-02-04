@@ -114,23 +114,16 @@ section {
 }
 
 #hero {
-    /* 修正: 100%だと親要素に依存するため、画面全体なら100vhが推奨です */
-    min-height: 100vh; 
-    
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
-    /* 背景設定 */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('S__18751507.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    /* PCなど大きな画面ではfixedを有効にする */
     background-attachment: fixed;
-    
     color: white;
     max-width: 100%;
     position: relative;
@@ -409,15 +402,6 @@ h2::after {
     .hero-content h1 {
         font-size: 2.2rem;
     }
-
-    #hero {
-        /* スマホではfixedを解除して、画像の極端な拡大を防ぐ */
-        background-attachment: scroll;
-        
-        /* 必要であれば高さを調整（例: スマホでは少し低くするなど） */
-        /* min-height: 80vh; */ 
-    }
-
     
     .about-content {
         grid-template-columns: 1fr;
@@ -430,5 +414,11 @@ h2::after {
     
     .skills {
         justify-content: center;
+    }
+    
+    #hero {
+        background-attachment: scroll;
+        min-height: 100vh;
+        background-position: center center;
     }
 }
